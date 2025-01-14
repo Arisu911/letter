@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive CSS Envelope with Letter Opening Animation">
     <title>CSS Envelope + Letter (Open/Close on Click)</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
-        <div class="envelope-wrapper">
+        <div class="envelope-wrapper" aria-label="Clickable Envelope">
             <div class="envelope">
                 <div class="letter">
-                    <div class="text">
-                        <strong>Hi my love, shifa</strong>
+                    <section class="text">
+                        <h2>Hi my love, Shifa</h2>
                         <p>
-                             The past couple of days were harsh on you and me.
-                            Just wanted to wish u that happy 7 months of us being together 
-                            and 8 months of u knowing me. 
-        
+                            The past couple of days were harsh on you and me.
+                            Just wanted to wish you a happy 7 months of us being together
+                            and 8 months of you knowing me.
                         </p>
-                    </div>
+                    </section>
                 </div>
             </div>
-            <div class="heart"></div>
+            <div class="heart" aria-hidden="true"></div>
         </div>
     </div>
     <script>
         const envelope = document.querySelector('.envelope-wrapper');
         envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
+            envelope.classList.toggle('flap'); // Ensure .flap is defined in style.css
         });
     </script>
 </body>
